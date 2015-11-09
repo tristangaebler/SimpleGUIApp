@@ -23,6 +23,7 @@ public class GUIFrame extends JFrame
 	{
 		this.setContentPane(basePanel); //Must be the first line of the method
 		this.setSize(400,400); //Window size
+		this.setTitle("Did someone say knack!");
 		this.setResizable(false);
 		this.setVisible(true); //Must be last line of the method
 	}
