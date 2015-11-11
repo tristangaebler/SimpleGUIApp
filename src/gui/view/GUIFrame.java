@@ -1,6 +1,7 @@
 package gui.view;
 
 import javax.swing.JFrame;
+import java.awt.Color;
 import gui.controller.GUIController;
 /**
  * 
@@ -18,11 +19,14 @@ public class GUIFrame extends JFrame
 		basePanel = new GUIPanel(baseController);
 		setUpFrame();
 	}
-	
+	/**
+	 * Helper method to prepare the frame
+	 */
 	private void setUpFrame()
 	{
 		this.setContentPane(basePanel); //Must be the first line of the method
-		this.setSize(400,400); //Window size
+		this.setSize(500,500); //Window size
+		this.setBackground(Color.BLUE);
 		this.setTitle("Did someone say knack!");
 		this.setResizable(false);
 		this.setVisible(true); //Must be last line of the method

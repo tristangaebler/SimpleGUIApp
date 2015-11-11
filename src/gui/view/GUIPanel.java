@@ -1,11 +1,14 @@
 package gui.view;
 
+
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 import gui.controller.GUIController;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GUIPanel extends JPanel
 {
@@ -37,6 +40,10 @@ public class GUIPanel extends JPanel
 		this.add(firstTextField);
 	}
 	
+	/**
+	 * Helper method for arranging the panel
+	 * Dumping ground for layout
+	 */
 	private void setUpLayout()
 	{
 		baseLayout.putConstraint(SpringLayout.NORTH, firstButton, 10, SpringLayout.NORTH, this);
@@ -48,6 +55,20 @@ public class GUIPanel extends JPanel
 	
 	private void setUpListeners()
 	{
-		
+		firstButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				firstTextField.setText("The force is strong with this one");
+			}
+		});
 	}
 }
+
+
+
+
+
+
+
+
