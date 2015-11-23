@@ -50,6 +50,16 @@ public class GUIPanel extends JPanel
 		firstButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 	}
 	
+	private void changeRandomColor()
+	{
+		int red, green, blue;
+		red = (int) (Math.random() * 256);
+		green = (int) (Math.random() * 256);
+		blue = (int) (Math.random() * 256);
+		
+		this.setBackground(new Color(red, green, blue));
+	}
+	
 	private void setUpListeners()
 	{
 		firstButton.addActionListener(new ActionListener()
