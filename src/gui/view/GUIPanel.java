@@ -67,6 +67,7 @@ public class GUIPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				firstTextField.setText("The force is strong with this one");
+				
 			}
 		});
 		
@@ -79,12 +80,12 @@ public class GUIPanel extends JPanel
 			
 			public void mouseEntered(MouseEvent entered)
 			{
-				
+				//changeRandomColor();
 			}
 			
 			public void mouseExited(MouseEvent exited)
 			{
-				
+				//changeRandomColor();
 			}
 			
 			public void mouseReleased(MouseEvent released)
@@ -95,6 +96,28 @@ public class GUIPanel extends JPanel
 			public void mousePressed(MouseEvent pressed)
 			{
 				
+			}
+		});
+		
+		this.addMouseMotionListener(new MouseMotionListener()
+		{
+			public void mouseMoved(MouseEvent moved)
+			{
+				if(moved.isAltDown())
+				{
+					changeRandomColor();
+				}
+				firstTextField.setText("Mouse X: " + moved.getX() + "Mouse Y: " + moved.getY());
+				if((Math.abs(moved.getX() - firstButton.getX()) < 5) && (Math.abs(moved.getY() - firstButton.getY())< 5))
+				{
+					firstButton.setLocation((int) (Math.random() * 400), (int) (Math.random() * 400));
+				}
+				
+			}
+			
+			public void mouseDragged(MouseEvent dragged)
+			{
+				changeRandomColor();
 			}
 		});
 	}
