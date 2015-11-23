@@ -107,7 +107,9 @@ public class GUIPanel extends JPanel
 				{
 					changeRandomColor();
 				}
+				
 				firstTextField.setText("Mouse X: " + moved.getX() + "Mouse Y: " + moved.getY());
+				
 				if((Math.abs(moved.getX() - firstButton.getX()) < 5) && (Math.abs(moved.getY() - firstButton.getY())< 5))
 				{
 					firstButton.setLocation((int) (Math.random() * 400), (int) (Math.random() * 400));
