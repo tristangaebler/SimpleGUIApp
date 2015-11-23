@@ -1,14 +1,11 @@
 package gui.view;
 
 
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JTextField;
-import javax.swing.SpringLayout;
+import javax.swing.*;
 import gui.controller.GUIController;
 import java.awt.Font;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import java.awt.event.*;
+import java.awt.Color;
 
 public class GUIPanel extends JPanel
 {
@@ -60,6 +57,34 @@ public class GUIPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				firstTextField.setText("The force is strong with this one");
+			}
+		});
+		
+		this.addMouseListener(new MouseListener()
+		{
+			public void mouseClicked(MouseEvent click)
+			{
+				
+			}
+			
+			public void mouseEntered(MouseEvent entered)
+			{
+				
+			}
+			
+			public void mouseExited(MouseEvent exited)
+			{
+				
+			}
+			
+			public void mouseReleased(MouseEvent released)
+			{
+				
+			}
+			
+			public void mousePressed(MouseEvent pressed)
+			{
+				
 			}
 		});
 	}
